@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+ 
+  </head>
+  <body>
+
+
+<p class="d-inline-flex gap-1">
+	<button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1">
+	隊伍
+	</button>
+	<button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">
+	屬性相剋
+	</button>
+<!-- 	<button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample3">
+	PM 查詢
+	</button> -->
+	<button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample4">
+	速度線
+	</button>
+</p>
+
+<div class="collapse main-card" id="collapseExample1">
+	<div class="card card-body">
+		<div class="btn-group" role="group" aria-label="Third group">
+			<button type="button" class="btn btn-info team-btn" data-bs-toggle="collapse" data-bs-target="#collapseExample1-1" aria-expanded="false" aria-controls="collapseExample1-1"><img src="img/Gardevoir.png" width="100%"></button>
+			<button type="button" class="btn btn-info team-btn" data-bs-toggle="collapse" data-bs-target="#collapseExample1-2" aria-expanded="false" aria-controls="collapseExample1-2"><img src="img/Arcanine-Hisui.png" width="100%"></button>
+			<button type="button" class="btn btn-info team-btn" data-bs-toggle="collapse" data-bs-target="#collapseExample1-3" aria-expanded="false" aria-controls="collapseExample1-3"><img src="img/Clodsire.png" width="100%"></button>
+		</div>
+		<div class="btn-group" role="group" aria-label="Third group">
+			<button type="button" class="btn btn-info team-btn" data-bs-toggle="collapse" data-bs-target="#collapseExample1-4" aria-expanded="false" aria-controls="collapseExample1-4"><img src="img/Mimikyu.png" width="100%"></button>
+			<button type="button" class="btn btn-info team-btn" data-bs-toggle="collapse" data-bs-target="#collapseExample1-5" aria-expanded="false" aria-controls="collapseExample1-5"><img src="img/Rotom-Wash.png" width="100%"></button>
+			<button type="button" class="btn btn-info team-btn" data-bs-toggle="collapse" data-bs-target="#collapseExample1-6" aria-expanded="false" aria-controls="collapseExample1-6"><img src="img/Meowscarada.png" width="100%"></button>
+		</div>
+
+		<p></p>
+		<div class="collapse team-card" id="collapseExample1-1">
+			<img src="img/Gardevoir-3.jpg" width="100%">
+			<p></p>
+			<img src="img/Gardevoir-2.jpg" width="100%">
+		</div>
+		<div class="collapse team-card" id="collapseExample1-2">
+			<img src="img/Arcanine-Hisui-3.jpg" width="100%">
+			<p></p>
+			<img src="img/Arcanine-Hisui-2.jpg" width="100%">
+		</div>
+		<div class="collapse team-card" id="collapseExample1-3">
+			<img src="img/Clodsire-3.jpg" width="100%">
+			<p></p>
+			<img src="img/Clodsire-2.jpg" width="100%">
+		</div>
+		<div class="collapse team-card" id="collapseExample1-4">
+			<img src="img/Mimikyu-3.jpg" width="100%">
+			<p></p>
+			<img src="img/Mimikyu-2.jpg" width="100%">
+		</div>
+		<div class="collapse team-card" id="collapseExample1-5">
+			<img src="img/Rotom-Wash-3.jpg" width="100%">
+			<p></p>
+			<img src="img/Rotom-Wash-2.jpg" width="100%">
+		</div>
+		<div class="collapse team-card" id="collapseExample1-6">
+			<img src="img/Meowscarada-3.jpg" width="100%">
+			<p></p>
+			<img src="img/Meowscarada-2.jpg" width="100%">
+		</div>
+	</div>
+</div>
+
+<div class="collapse main-card" id="collapseExample2">
+	<div class="card card-body">
+		<img src="img/img_01.png">
+		<p></p>
+
+		<div class="btn-group" role="group" aria-label="Third group">
+			<button type="button" class="btn btn-info type-btn" style="background-color: #aeaeae;" data-type="一般">一般</button>
+			<button type="button" class="btn btn-info type-btn" style="background-color: #ffa767;" data-type="火">火</button>
+			<button type="button" class="btn btn-info type-btn" style="background-color: #64c6f7;" data-type="水">水</button>
+			<button type="button" class="btn btn-info type-btn" style="background-color: #e8d401;" data-type="電">電</button>
+		</div>
+		<div class="btn-group" role="group" aria-label="Third group">
+			<button type="button" class="btn btn-info type-btn" style="background-color: #9ac30d;" data-type="草">草</button>
+			<button type="button" class="btn btn-info type-btn" style="background-color: #60e8f4;" data-type="冰">冰</button>
+			<button type="button" class="btn btn-info type-btn" style="background-color: #ef696a;" data-type="格">格鬥</button>
+			<button type="button" class="btn btn-info type-btn" style="background-color: #ab7acb;" data-type="毒">毒</button>
+		</div>
+		<div class="btn-group" role="group" aria-label="Third group">
+			<button type="button" class="btn btn-info type-btn" style="background-color: #c8a841;" data-type="地面">地面</button>
+			<button type="button" class="btn btn-info type-btn" style="background-color: #64a6f0;" data-type="飛行">飛行</button>
+			<button type="button" class="btn btn-info type-btn" style="background-color: #ec7ff4;" data-type="超能">超能</button>
+			<button type="button" class="btn btn-info type-btn" style="background-color: #51cc5a;" data-type="蟲">蟲</button>
+		</div>
+		<div class="btn-group" role="group" aria-label="Third group">
+			<button type="button" class="btn btn-info type-btn" style="background-color: #fbc726;" data-type="岩石">岩石</button>
+			<button type="button" class="btn btn-info type-btn" style="background-color: #756eb4;" data-type="幽靈">幽靈</button>
+			<button type="button" class="btn btn-info type-btn" style="background-color: #fe8858;" data-type="龍">龍</button>
+			<button type="button" class="btn btn-info type-btn" style="background-color: #6881d5;" data-type="惡">惡</button>
+		</div>
+		<div class="btn-group" role="group" aria-label="Third group">
+			<button type="button" class="btn btn-info type-btn" style="background-color: #808aa5;" data-type="鋼">鋼</button>
+			<button type="button" class="btn btn-info type-btn" style="background-color: #fd779a;" data-type="妖精">妖精</button>
+		</div>
+		<div class="btn-group" role="group" aria-label="Third group">
+			<button type="button" class="btn btn-info type-clear-btn" style="background-color: #dedede;">Clear</button>
+		</div>
+	</div>
+	<div id="type-result"></div>
+</div>
+
+<div class="collapse main-card" id="collapseExample3">
+	<div class="card card-body">
+		<div class="btn-group" role="group" aria-label="Third group">
+			<button type="button" class="btn btn-info type-btn" style="background-color: #aeaeae;" data-type="一般">一般</button>
+			<button type="button" class="btn btn-info type-btn" style="background-color: #ffa767;" data-type="火">火</button>
+			<button type="button" class="btn btn-info type-btn" style="background-color: #64c6f7;" data-type="水">水</button>
+			<button type="button" class="btn btn-info type-btn" style="background-color: #e8d401;" data-type="電">電</button>
+		</div>
+		<div class="btn-group" role="group" aria-label="Third group">
+			<button type="button" class="btn btn-info type-btn" style="background-color: #9ac30d;" data-type="草">草</button>
+			<button type="button" class="btn btn-info type-btn" style="background-color: #60e8f4;" data-type="冰">冰</button>
+			<button type="button" class="btn btn-info type-btn" style="background-color: #ef696a;" data-type="格">格鬥</button>
+			<button type="button" class="btn btn-info type-btn" style="background-color: #ab7acb;" data-type="毒">毒</button>
+		</div>
+		<div class="btn-group" role="group" aria-label="Third group">
+			<button type="button" class="btn btn-info type-btn" style="background-color: #c8a841;" data-type="地面">地面</button>
+			<button type="button" class="btn btn-info type-btn" style="background-color: #64a6f0;" data-type="飛行">飛行</button>
+			<button type="button" class="btn btn-info type-btn" style="background-color: #ec7ff4;" data-type="超能">超能</button>
+			<button type="button" class="btn btn-info type-btn" style="background-color: #51cc5a;" data-type="蟲">蟲</button>
+		</div>
+		<div class="btn-group" role="group" aria-label="Third group">
+			<button type="button" class="btn btn-info type-btn" style="background-color: #fbc726;" data-type="岩石">岩石</button>
+			<button type="button" class="btn btn-info type-btn" style="background-color: #756eb4;" data-type="幽靈">幽靈</button>
+			<button type="button" class="btn btn-info type-btn" style="background-color: #fe8858;" data-type="龍">龍</button>
+			<button type="button" class="btn btn-info type-btn" style="background-color: #6881d5;" data-type="惡">惡</button>
+		</div>
+		<div class="btn-group" role="group" aria-label="Third group">
+			<button type="button" class="btn btn-info type-btn" style="background-color: #808aa5;" data-type="鋼">鋼</button>
+			<button type="button" class="btn btn-info type-btn" style="background-color: #fd779a;" data-type="妖精">妖精</button>
+		</div>
+	</div>
+
+<div class="collapse main-card" id="collapseExample4">
+		<div class="card card-body">
+			4444444444444444444444444444444
+		</div>
+	</div>
+</div>
+
+
+  </body>
+</html>
+
+<style type="text/css">
+	.type-btn {
+		width: 20%;
+		margin: 2px 5px;
+		border: none;
+		color: #ffffff;
+	}
+	.team-btn {
+		width: 20%;
+		margin: 2px 5px;
+		background-color: #eeeeee;
+		border-color: #bbbbbb;
+	}
+	.card-body {
+		border: none;
+	}
+
+</style>
+
+
+<script>
+
+
+	document.getElementById('collapseExample1').addEventListener('show.bs.collapse', function () {
+		collapseAllMain(1);
+	});
+	document.getElementById('collapseExample2').addEventListener('show.bs.collapse', function () {
+		collapseAllMain(2);
+	});
+	document.getElementById('collapseExample3').addEventListener('show.bs.collapse', function () {
+		collapseAllMain(3);
+	});
+	document.getElementById('collapseExample4').addEventListener('show.bs.collapse', function () {
+		collapseAllMain(4);
+	});
+
+	document.getElementById('collapseExample1-1').addEventListener('show.bs.collapse', function () {
+		collapseAllTeam();
+	});
+	document.getElementById('collapseExample1-2').addEventListener('show.bs.collapse', function () {
+		collapseAllTeam();
+	});
+	document.getElementById('collapseExample1-3').addEventListener('show.bs.collapse', function () {
+		collapseAllTeam();
+	});
+	document.getElementById('collapseExample1-4').addEventListener('show.bs.collapse', function () {
+		collapseAllTeam();
+	});
+	document.getElementById('collapseExample1-5').addEventListener('show.bs.collapse', function () {
+		collapseAllTeam();
+	});
+	document.getElementById('collapseExample1-6').addEventListener('show.bs.collapse', function () {
+		collapseAllTeam();
+	});
+
+	function collapseAllMain(num) {
+		for(let i = 1; i <= 3; i ++) {
+			let instanceMain = bootstrap.Collapse.getInstance(document.getElementById('collapseExample' + i));
+			if(instanceMain && num != i) instanceMain.hide();
+		}
+	}
+
+	function collapseAllTeam() {
+		for(let i = 1; i <= 6; i ++) {
+			let instancelTeam = bootstrap.Collapse.getInstance(document.getElementById('collapseExample1-' + i));
+			if(instancelTeam) instancelTeam.hide();
+		}
+	}
+
+
+
+	const typeEffectiveness = {
+	  "一般": {"一般": 1, "火": 1, "水": 1, "電": 1, "草": 1, "冰": 1, "格鬥": 1, "毒": 1, "地面": 1, "飛行": 1, "超能": 1, "蟲": 1, "岩石": 0.5, "幽靈": 0, "龍": 1, "惡": 1, "鋼": 0.5, "妖精": 1},
+	  "火": {"一般": 1, "火": 0.5, "水": 0.5, "電": 1, "草": 2, "冰": 2, "格鬥": 1, "毒": 1, "地面": 1, "飛行": 1, "超能": 1, "蟲": 2, "岩石": 0.5, "幽靈": 1, "龍": 0.5, "惡": 1, "鋼": 2, "妖精": 1},
+	  "水": {"一般": 1, "火": 2, "水": 0.5, "電": 1, "草": 0.5, "冰": 1, "格鬥": 1, "毒": 1, "地面": 2, "飛行": 1, "超能": 1, "蟲": 1, "岩石": 2, "幽靈": 1, "龍": 0.5, "惡": 1, "鋼": 1, "妖精": 1},
+	  "電": {"一般": 1, "火": 1, "水": 2, "電": 0.5, "草": 0.5, "冰": 1, "格鬥": 1, "毒": 1, "地面": 0, "飛行": 2, "超能": 1, "蟲": 1, "岩石": 1, "幽靈": 1, "龍": 0.5, "惡": 1, "鋼": 1, "妖精": 1},
+	  "草": {"一般": 1, "火": 0.5, "水": 2, "電": 1, "草": 0.5, "冰": 1, "格鬥": 1, "毒": 0.5, "地面": 2, "飛行": 0.5, "超能": 1, "蟲": 0.5, "岩石": 2, "幽靈": 1, "龍": 0.5, "惡": 1, "鋼": 0.5, "妖精": 1},
+	  "冰": {"一般": 1, "火": 0.5, "水": 0.5, "電": 1, "草": 2, "冰": 0.5, "格鬥": 1, "毒": 1, "地面": 2, "飛行": 2, "超能": 1, "蟲": 1, "岩石": 1, "幽靈": 1, "龍": 2, "惡": 1, "鋼": 0.5, "妖精": 1},
+	  "格鬥": {"一般": 2, "火": 1, "水": 1, "電": 1, "草": 1, "冰": 2, "格鬥": 1, "毒": 0.5, "地面": 1, "飛行": 0.5, "超能": 0.5, "蟲": 0.5, "岩石": 2, "幽靈": 0, "龍": 1, "惡": 2, "鋼": 2, "妖精": 0.5},
+	  "毒": {"一般": 1, "火": 1, "水": 1, "電": 1, "草": 2, "冰": 1, "格鬥": 1, "毒": 0.5, "地面": 0.5, "飛行": 1, "超能": 1, "蟲": 1, "岩石": 0.5, "幽靈": 0.5, "龍": 1, "惡": 1, "鋼": 0, "妖精": 2},
+	  "地面": {"一般": 1, "火": 2, "水": 1, "電": 2, "草": 0.5, "冰": 1, "格鬥": 1, "毒": 2, "地面": 1, "飛行": 0, "超能": 1, "蟲": 0.5, "岩石": 2, "幽靈": 1, "龍": 1, "惡": 1, "鋼": 2, "妖精": 1},
+	  "飛行": {"一般": 1, "火": 1, "水": 1, "電": 0.5, "草": 2, "冰": 1, "格鬥": 2, "毒": 1, "地面": 1, "飛行": 1, "超能": 1, "蟲": 2, "岩石": 0.5, "幽靈": 1, "龍": 1, "惡": 1, "鋼": 0.5, "妖精": 1},
+	  "超能": {"一般": 1, "火": 1, "水": 1, "電": 1, "草": 1, "冰": 1, "格鬥": 2, "毒": 1, "地面": 1, "飛行": 1, "超能": 0.5, "蟲": 1, "岩石": 1, "幽靈": 1, "龍": 1, "惡": 0, "鋼": 0.5, "妖精": 1},
+	  "蟲": {"一般": 1, "火": 0.5, "水": 1, "電": 1, "草": 2, "冰": 1, "格鬥": 0.5, "毒": 0.5, "地面": 1, "飛行": 0.5, "超能": 2, "蟲": 1, "岩石": 1, "幽靈": 0.5, "龍": 1, "惡": 2, "鋼": 0.5, "妖精": 0.5},
+	  "岩石": {"一般": 1, "火": 2, "水": 1, "電": 1, "草": 1, "冰": 2, "格鬥": 0.5, "毒": 1, "地面": 0.5, "飛行": 2, "超能": 1, "蟲": 2, "岩石": 1, "幽靈": 1, "龍": 1, "惡": 1, "鋼": 0.5, "妖精": 1},
+	  "幽靈": {"一般": 0, "火": 1, "水": 1, "電": 1, "草": 1, "冰": 1, "格鬥": 1, "毒": 1, "地面": 1, "飛行": 1, "超能": 2, "蟲": 1, "岩石": 1, "幽靈": 2, "龍": 1, "惡": 0.5, "鋼": 1, "妖精": 1},
+	  "龍": {"一般": 1, "火": 1, "水": 1, "電": 1, "草": 1, "冰": 1, "格鬥": 1, "毒": 1, "地面": 1, "飛行": 1, "超能": 1, "蟲": 1, "岩石": 1, "幽靈": 1, "龍": 2, "惡": 1, "鋼": 0.5, "妖精": 0},
+	  "惡": {"一般": 1, "火": 1, "水": 1, "電": 1, "草": 1, "冰": 1, "格鬥": 0.5, "毒": 1, "地面": 1, "飛行": 1, "超能": 2, "蟲": 1, "岩石": 1, "幽靈": 2, "龍": 1, "惡": 0.5, "鋼": 1, "妖精": 0.5},
+	  "鋼": {"一般": 1, "火": 0.5, "水": 0.5, "電": 0.5, "草": 1, "冰": 2, "格鬥": 1, "毒": 1, "地面": 1, "飛行": 1, "超能": 1, "蟲": 1, "岩石": 2, "幽靈": 1, "龍": 1, "惡": 1, "鋼": 0.5, "妖精": 2},
+	  "妖精": {"一般": 1, "火": 0.5, "水": 1, "電": 1, "草": 1, "冰": 1, "格鬥": 2, "毒": 0.5, "地面": 1, "飛行": 1, "超能": 1, "蟲": 1, "岩石": 1, "幽靈": 1, "龍": 2, "惡": 2, "鋼": 0.5, "妖精": 1}
+	};
+
+
+
+	// 計算傷害倍率的函數
+	function calculateDamageMultiplier(attackType, defenseTypes) {
+	  let multiplier = 1;
+	  defenseTypes.forEach(defenseType => {
+	    multiplier *= typeEffectiveness[attackType][defenseType];
+	  });
+	  return multiplier;
+	}
+
+	// 測試案例
+	// console.log(calculateDamageMultiplier("火", ["冰", "蟲"]));
+	// console.log(calculateDamageMultiplier("一般", ["幽靈", "毒"]));
+	// console.log(calculateDamageMultiplier("幽靈", ["一般"]));
+	// console.log(calculateDamageMultiplier("妖精", ["鋼", "毒"]));
+	// console.log(calculateDamageMultiplier("龍", ["龍"]));
+
+
+
+
+	// 計算防禦方傷害倍率的函數
+	function listDamageMultipliers(defenseTypes) {
+	  const results = [];
+
+	  // 遍歷所有攻擊屬性
+	  for (const attackType in typeEffectiveness) {
+	    let multiplier = 1;
+
+	    // 計算防禦方屬性的累乘倍率
+	    defenseTypes.forEach(defenseType => {
+	      multiplier *= typeEffectiveness[attackType][defenseType];
+	    });
+
+	    // 將結果存入 results 陣列
+	    results.push({ attackType, multiplier });
+	  }
+
+	  // 按倍率從大到小排序
+	  results.sort((a, b) => b.multiplier - a.multiplier);
+
+	  return results;
+	}
+
+	// 測試案例
+	// console.log(listDamageMultipliers(["冰", "蟲"]));
+	// console.log(listDamageMultipliers(["一般"]));
+
+
+
+
+	const typeButtons = document.querySelectorAll('.type-btn');
+	let selectedTypes = [];
+
+
+	document.querySelectorAll('.type-clear-btn').forEach(button => {
+ 		button.addEventListener('click', () => {
+ 			selectedTypes = [];
+ 			const resultDiv = document.getElementById('type-result');
+ 			resultDiv.innerHTML = '';
+ 		});
+	});
+
+	// 為每個按鈕添加事件監聽器
+	typeButtons.forEach(button => {
+	  button.addEventListener('click', () => {
+	    const defenseType = button.getAttribute('data-type');
+
+	    // 若已選擇了兩個屬性，則不再添加
+	    if (!selectedTypes.includes(defenseType)) {
+	      selectedTypes.push(defenseType);
+	    }
+
+	    // 如果選擇了一個屬性，顯示所有屬性對該屬性的傷害倍率
+	    if (selectedTypes.length === 1) {
+	      const results = listDamageMultipliers(selectedTypes);
+	      console.log(results);
+	      displayResults(results);
+	    } 
+	    // 如果選擇了兩個屬性，顯示所有屬性對這兩個屬性的乘積結果
+	    else if (selectedTypes.length === 2) {
+	      const combinedResults = calculateCombinedResults(selectedTypes);
+	       console.log(combinedResults);
+	      displayCombinedResults(combinedResults);
+	      selectedTypes = []; // 重置選擇以便重新選擇
+	    }
+	  });
+	});
+
+	// 顯示單個屬性的所有倍率
+	function displayResults(results) {
+	  const resultDiv = document.getElementById('type-result');
+	  resultDiv.innerHTML = '屬性 "' + selectedTypes[0] + '" 的傷害倍率:<br>'; // 清空之前的結果
+	  console.log('屬性 "' + selectedTypes[0] + '" 的傷害倍率：');
+
+	  results.forEach(result => {
+	    const resultItem = document.createElement('div');
+	    resultItem.textContent = `${result.attackType}： ${result.multiplier}`;
+	    resultDiv.appendChild(resultItem);
+	    // console.log(result.attackType + "：" + result.multiplier);
+	  });
+	}
+
+	// 計算兩個屬性對所有其他屬性的乘積結果
+	function calculateCombinedResults(selectedTypes) {
+	  const results = listDamageMultipliers(selectedTypes);
+	  const combinedResults = [];
+
+	  for (const result of results) {
+	    const attackType = result.attackType;
+	    const multiplier = result.multiplier;
+
+	    // 計算乘積
+	    const newMultiplier = 
+	                          (typeEffectiveness[attackType][selectedTypes[0]]) * 
+	                          (typeEffectiveness[attackType][selectedTypes[1]]);
+	    combinedResults.push({ attackType, multiplier: newMultiplier });
+	  }
+
+	  return combinedResults;
+	}
+
+	// 顯示兩個屬性相乘的結果
+	function displayCombinedResults(combinedResults) {
+	  const resultDiv = document.getElementById('type-result');
+	  resultDiv.innerHTML = '<br>屬性 "' + selectedTypes.join('" 和 "') + '" 的乘積結果:<br>'; // 增加一個分隔行
+		// console.log('屬性 "' + selectedTypes.join('" 和 "') + '" 的乘積結果：');
+
+	  combinedResults.forEach(result => {
+	    const resultItem = document.createElement('div');
+	    resultItem.textContent = `${result.attackType}： ${result.multiplier}`;
+	    resultDiv.appendChild(resultItem);
+	    // console.log(result.attackType + "：" + result.multiplier);
+	  });
+	}	
+
+
+</script>
