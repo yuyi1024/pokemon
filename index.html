@@ -29,14 +29,14 @@
 <div class="collapse main-card" id="collapseExample1">
 	<div class="card card-body">
 		<div class="btn-group" role="group" aria-label="Third group">
-			<button type="button" class="btn btn-info team-btn" data-bs-toggle="collapse" data-bs-target="#collapseExample1-1" aria-expanded="false" aria-controls="collapseExample1-1"><img src="img/Gardevoir.png" width="100%"></button>
-			<button type="button" class="btn btn-info team-btn" data-bs-toggle="collapse" data-bs-target="#collapseExample1-2" aria-expanded="false" aria-controls="collapseExample1-2"><img src="img/Arcanine-Hisui.png" width="100%"></button>
-			<button type="button" class="btn btn-info team-btn" data-bs-toggle="collapse" data-bs-target="#collapseExample1-3" aria-expanded="false" aria-controls="collapseExample1-3"><img src="img/Clodsire.png" width="100%"></button>
+			<button type="button" class="btn btn-info team-btn" data-bs-toggle="collapse" data-bs-target="#collapseExample1-1" aria-expanded="false" aria-controls="collapseExample1-1"><img src="img/poke/Gardevoir.png" width="100%"></button>
+			<button type="button" class="btn btn-info team-btn" data-bs-toggle="collapse" data-bs-target="#collapseExample1-2" aria-expanded="false" aria-controls="collapseExample1-2"><img src="img/poke/Arcanine-Hisui.png" width="100%"></button>
+			<button type="button" class="btn btn-info team-btn" data-bs-toggle="collapse" data-bs-target="#collapseExample1-3" aria-expanded="false" aria-controls="collapseExample1-3"><img src="img/poke/Clodsire.png" width="100%"></button>
 		</div>
 		<div class="btn-group" role="group" aria-label="Third group">
-			<button type="button" class="btn btn-info team-btn" data-bs-toggle="collapse" data-bs-target="#collapseExample1-4" aria-expanded="false" aria-controls="collapseExample1-4"><img src="img/Mimikyu.png" width="100%"></button>
-			<button type="button" class="btn btn-info team-btn" data-bs-toggle="collapse" data-bs-target="#collapseExample1-5" aria-expanded="false" aria-controls="collapseExample1-5"><img src="img/Rotom-Wash.png" width="100%"></button>
-			<button type="button" class="btn btn-info team-btn" data-bs-toggle="collapse" data-bs-target="#collapseExample1-6" aria-expanded="false" aria-controls="collapseExample1-6"><img src="img/Meowscarada.png" width="100%"></button>
+			<button type="button" class="btn btn-info team-btn" data-bs-toggle="collapse" data-bs-target="#collapseExample1-4" aria-expanded="false" aria-controls="collapseExample1-4"><img src="img/poke/Mimikyu.png" width="100%"></button>
+			<button type="button" class="btn btn-info team-btn" data-bs-toggle="collapse" data-bs-target="#collapseExample1-5" aria-expanded="false" aria-controls="collapseExample1-5"><img src="img/poke/Rotom-Wash.png" width="100%"></button>
+			<button type="button" class="btn btn-info team-btn" data-bs-toggle="collapse" data-bs-target="#collapseExample1-6" aria-expanded="false" aria-controls="collapseExample1-6"><img src="img/poke/Meowscarada.png" width="100%"></button>
 		</div>
 
 		<p></p>
@@ -110,10 +110,7 @@
 			<button type="button" class="btn btn-info type-clear-btn" style="background-color: #dedede;">Clear</button>
 		</div>
 	</div>
-	<!-- <div id="type-result"></div> -->
-	<table id="type-result">
-		
-	</table>
+	<table id="type-result"></table>
 </div>
 
 <div class="collapse main-card" id="collapseExample3">
@@ -147,10 +144,38 @@
 			<button type="button" class="btn btn-info type-btn" style="background-color: #fd779a;" data-type="妖精">妖精</button>
 		</div>
 	</div>
+</div>
 
 <div class="collapse main-card" id="collapseExample4">
 		<div class="card card-body">
-			4444444444444444444444444444444
+<!-- 			<ul class="list-group list-group-flush">
+			  <li class="list-group-item">
+			  	<span class="badge rounded-pill text-bg-primary">80</span>
+			  	<img src="img/Gardevoir.png" width="35px">
+				<span><b>沙奈朵</b></span>
+			  	<div class="pm-type">
+				  	<span class="badge rounded-pill text-bg-danger">超能</span>
+				  	<span class="badge rounded-pill text-bg-danger">妖精</span>
+			  	</div>
+			  </li>
+			  <li class="list-group-item">
+			  	<span class="badge rounded-pill text-bg-primary">80</span>
+			  	<img src="img/Gardevoir.png" width="35px">
+				<span><b>沙奈朵</b></span>
+			  	<div class="pm-type">
+				  	<span class="badge rounded-pill text-bg-danger">超能</span>
+				  	<span class="badge rounded-pill text-bg-danger">妖精</span>
+			  	</div>
+			  </li>
+			</ul> -->
+
+
+			<ul id="pokemon-list" class="list-group list-group-flush">
+			  <!-- JavaScript 將會在這裡插入 <li> 元素 -->
+			</ul>
+
+
+
 		</div>
 	</div>
 </div>
@@ -183,13 +208,21 @@
 		border: 1px solid #dddddd;
 		width: 50%;
 	}
+	.pm-type {
+		position: absolute;
+	    right: 0;
+	    display: inline;
+	}
+	.my {
+		background-color: #ffe5e5;
+	}
 
 </style>
 
 
 <script>
 
-
+	// collapse 操作
 	document.getElementById('collapseExample1').addEventListener('show.bs.collapse', function () {
 		collapseAllMain(1);
 	});
@@ -223,7 +256,7 @@
 	});
 
 	function collapseAllMain(num) {
-		for(let i = 1; i <= 3; i ++) {
+		for(let i = 1; i <= 4; i ++) {
 			let instanceMain = bootstrap.Collapse.getInstance(document.getElementById('collapseExample' + i));
 			if(instanceMain && num != i) instanceMain.hide();
 		}
@@ -237,7 +270,7 @@
 	}
 
 
-
+	// 屬性傷害倍率
 	const typeEffectiveness = {
 	  "一般": {"一般": 1, "火": 1, "水": 1, "電": 1, "草": 1, "冰": 1, "格鬥": 1, "毒": 1, "地面": 1, "飛行": 1, "超能": 1, "蟲": 1, "岩石": 0.5, "幽靈": 0, "龍": 1, "惡": 1, "鋼": 0.5, "妖精": 1},
 	  "火": {"一般": 1, "火": 0.5, "水": 0.5, "電": 1, "草": 2, "冰": 2, "格鬥": 1, "毒": 1, "地面": 1, "飛行": 1, "超能": 1, "蟲": 2, "岩石": 0.5, "幽靈": 1, "龍": 0.5, "惡": 1, "鋼": 2, "妖精": 1},
@@ -309,7 +342,7 @@
 
 
 
-
+	// 屬性相剋觸發
 	const typeButtons = document.querySelectorAll('.type-btn');
 	let selectedTypes = [];
 
@@ -408,7 +441,165 @@
 	    table.appendChild(tr);
 	    // console.log(result.attackType + "：" + result.multiplier);
 	  });
-	}	
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	const pokemonData = [
+		{ name: "賽富豪", types: ["鋼", "飛行"], speed: 109, img: "img/poke/72f68c5cd2f9f0825690aa993a10ea18834b3190.png" },
+		{ name: "月月熊（赫月）", types: ["一般", "地面"], speed: 50, img: "img/poke/c766946543ce8501fad247fed6c246200eaadbfb.png" },
+		{ name: "多龍巴魯托", types: ["龍", "幽靈"], speed: 142, img: "img/poke/721ba56bc5288de03b8b1fc4142797fe04dcd62a.png" },
+		{ name: "鋁鋼橋龍", types: ["鋼", "飛行"], speed: 70, img: "img/poke/918499e695fb336ec487ff306eb77a836eaafcba.png" },
+		{ name: "三首惡龍", types: ["龍", "惡"], speed: 98, img: "img/poke/072285cb2f79f560e25fce81cc981a7432fa0123.png" },
+		{ name: "巨鍛匠", types: ["鋼", "妖精"], speed: 70, img: "img/poke/98decc8ad1267a1286fd44958b37080ad75dd079.png" },
+		{ name: "岩石巨靈", types: ["岩石", "地面"], speed: 55, img: "img/poke/7f0f14cc32ba8a3c8e98de94418de49cb8a07046.png" },
+		{ name: "吃吼霸", types: ["一般"], speed: 55, img: "img/poke/03b216f0422d99365e9d6e168c5a4054c7e46503.png" },
+		{ name: "大紐拉（洗翠）", types: ["惡", "格鬥"], speed: 115, img: "img/poke/1b8a26a4a56f0f053a684d851212a9afdbd0b165.png" },
+		{ name: "焰后蜥", types: ["毒", "火"], speed: 117, img: "img/poke/3b405b659d284efd18f8d36bf43f2ecfcb9f8cf1.png" },
+		{ name: "電蜘蛛", types: ["蟲", "電"], speed: 108, img: "img/poke/184e143b71359d9010bf9cbcf6bf526202281ec0.png" },
+		{ name: "鍬農砲蟲", types: ["蟲", "鋼"], speed: 43, img: "img/poke/cffb8c97372158d1007c845119409df43a0f5981.png" },
+		{ name: "裂咬陸鯊", types: ["龍", "地面"], speed: 102, img: "img/poke/d4d0ef0113d937d63f150354bd7a1869b36f33ea.png" },
+		{ name: "噴火龍", types: ["火", "飛行"], speed: 100, img: "img/poke/2050f1fd1283f473d7d048f8631712e7e003f802.png" },
+		{ name: "妙蛙花", types: ["草", "毒"], speed: 80, img: "img/poke/0186d64c5773c8d3d03cd05dc79574b2d2798d4f.png" },
+		{ name: "彩粉蝶", types: ["蟲", "飛行"], speed: 124, img: "img/poke/adbc56b774dfcc830e2a2cd976e42d4cc68bae03.png" },
+		{ name: "轟雷金剛猩", types: ["草", "惡"], speed: 60, img: "img/poke/27d88f3c80242866397ec4170552f70cb9eec0c8.png" },
+		{ name: "赤焰咆哮虎", types: ["火", "惡"], speed: 60, img: "img/poke/9e3219183dcd98f25b088b30856a74fd49dbd235.png" },
+		{ name: "暴鯉龍", types: ["水", "飛行"], speed: 81, img: "img/poke/ee070a971884e2c4da87d7a728e5821f9636f56d.png" },
+		{ name: "禿鷹娜", types: ["惡", "飛行"], speed: 80, img: "img/poke/e6c54076ac21ca45a8d745c6a8adf2a426f30a06.png" },
+		{ name: "水晶燈火靈", types: ["幽靈", "火"], speed: 80, img: "img/poke/6c591295dc0e5ce2d2a6835fc5e01f0123401a10.png" },
+		{ name: "幽尾玄魚", types: ["惡", "水"], speed: 50, img: "img/poke/658829cb6dc26528b731f83fab7b3f241f6e96fa.png" },
+		{ name: "來悲粗茶", types: ["惡", "毒"], speed: 60, img: "img/poke/57c6855b6863c8a46cf771a5f1518cd6a2d133e8.png" },
+		{ name: "蚊香蛙皇", types: ["水", "格鬥"], speed: 70, img: "img/poke/4b33c4f3411bb63fc80d5d149c64b1621a689e36.png" },
+		{ name: "艾路雷朵", types: ["超能", "格鬥"], speed: 80, img: "img/poke/20b55228e9d4c4160aed8b25cffbb2be48b80a16.png" },
+		{ name: "大嘴鷗", types: ["水", "飛行"], speed: 85, img: "img/poke/7c464b5870010c09f605c00e1589cacd1463335b.png" },
+		{ name: "巨鉗螳螂", types: ["蟲", "鋼"], speed: 65, img: "img/poke/00f9b6fc77b07974b842263e7077e8381edaec55.png" },
+		{ name: "西獅海壬", types: ["水", "妖精"], speed: 60, img: "img/poke/8fc52146f5b8a62bbfe3f6998f75b743b7e7c4c4.png" },
+		{ name: "瑪麗露力", types: ["水", "妖精"], speed: 50, img: "img/poke/3ca1ab344f1f2e9c537268a453a03d2fcaa9f74a.png" },
+		{ name: "蜜集大蛇", types: ["蟲", "毒"], speed: 25, img: "img/poke/393ca6d6fc72b016e991c0437f9651f9f20ec2ce.png" },
+		{ name: "煤碳龜", types: ["火"], speed: 20, img: "img/poke/f838f5040357a632ffd49172e050e279da79aebb.png" },
+		{ name: "多邊獸", types: ["一般"], speed: 40, img: "img/poke/e0cf20200e19405d7cffd0940e0380f5725e0451.png" },
+		{ name: "君主蛇", types: ["草"], speed: 113, img: "img/poke/fa33acbef6766bfd3829d8ef803b058b19e5e76b.png" },
+		{ name: "帝王拿波", types: ["水", "鋼"], speed: 60, img: "img/poke/b9315248eb858f1d27c2820c3143f0592981a8c9.png" },
+		{ name: "閃焰王牌", types: ["火"], speed: 119, img: "img/poke/75ba01425af3c244c3960ab85c30ce9b9201fdad.png" },
+		{ name: "水箭龜", types: ["水"], speed: 78, img: "img/poke/2fe157db59153af8abd636ab03c7df6f28b08242.png" },
+		{ name: "火神蛾", types: ["火", "蟲"], speed: 100, img: "img/poke/40bed77fa79926f97a5dbb32103449377879feca.png" },
+		{ name: "鋼鎧鴉", types: ["鋼", "飛行"], speed: 67, img: "img/poke/3435d3dd88eef664574a8fb11dafc14be27f62e6.png" },
+		{ name: "斗笠菇", types: ["草", "格鬥"], speed: 55, img: "img/poke/3aa8c625ee9c1d0dee559a73d8d4ea455aaea785.png" },
+		{ name: "敗露球菇", types: ["草", "毒"], speed: 30, img: "img/poke/0e85da4945fbe5276bfdf1569b9bf47ad0021a43.png" },
+		{ name: "暴飛龍", types: ["龍", "飛行"], speed: 100, img: "img/poke/1b6da69201f81f16752be61288bbb07575b71113.png" },
+		{ name: "烈腿蝗", types: ["蟲", "惡"], speed: 92, img: "img/poke/5da8f512523759232f743f19421d15ae31ada198.png" },
+		{ name: "劈斧螳螂", types: ["蟲", "鋼"], speed: 105, img: "img/poke/15f47a5d0acb307ac834b6646c44877bbabdd524.png" },
+		{ name: "九尾", types: ["火"], speed: 100, img: "img/poke/cc96e6a4eee980724ebd725bb8785334d3290074.png" },
+		{ name: "冰九尾", types: ["冰", "妖精"], speed: 109, img: "img/poke/397b20ea73c8358185d6f1d2971b5825b0cb0baf.png" },
+		{ name: "火焰雞", types: ["火", "格鬥"], speed: 80, img: "img/poke/947ff39f80129baca28d55a25cda84dc47087ecd.png" },
+		{ name: "紅蓮鎧騎", types: ["火", "超能"], speed: 85, img: "img/poke/5114ee078d4b2fd3e083bfd4069891a129b96070.png" },
+		{ name: "蒼炎刃鬼", types: ["火", "幽靈"], speed: 60, img: "img/poke/083849988ea741cfc3eef726f08c340a13989c85.png" },
+		{ name: "戟脊龍", types: ["龍", "冰"], speed: 87, img: "img/poke/af713b7e6c28234773dd6079505e00ed3a7e57d9.png" },
+		{ name: "烈箭鷹", types: ["火", "飛行"], speed: 126, img: "img/poke/6bc085a6abce6d0ae3bc07907722e3e5b057431a.png" },
+		{ name: "狂歡浪舞鴨", types: ["水", "格鬥"], speed: 85, img: "img/poke/0e6fc3d2671b53b10ba6b9422e3c65c031e351f5.png" },
+		{ name: "風速狗", types: ["火"], speed: 95, img: "img/poke/7ef9e71e9dc624e5558d7b4619f75ea8659eff55.png" },
+		{ name: "摔角鷹人", types: ["格鬥", "飛行"], speed: 118, img: "img/poke/a0e0558d9cfc881488ea24d3d6c061a5c8fae3a1.png" },
+		{ name: "土王", types: ["地面", "鋼"], speed: 40, img: "img/poke/Clodsire.png" },
+		{ name: "謎擬Q", types: ["幽靈", "妖精"], speed: 96, img: "img/poke/Mimikyu.png" },
+		{ name: "沙奈朵", types: ["超能", "妖精"], speed: 80, img: "img/poke/Gardevoir.png" },
+		{ name: "魔幻假面喵", types: ["惡"], speed: 123, img: "img/poke/Meowscarada.png" },
+		{ name: "風速狗(洗翠)", types: ["火", "岩石"], speed: 95, img: "img/poke/Arcanine-Hisui.png" },
+		{ name: "洛托姆(清洗)", types: ["電", "水"], speed: 86, img: "img/poke/Rotom-Wash.png" }
+	];
+
+
+
+	// const typeColors = {
+	//   "一般": "#aeaeae",
+	//   "火": "#ffa767",
+	//   "水": "#64c6f7",
+	//   "電": "#e8d401",
+	//   "草": "#9ac30d",
+	//   "冰": "#60e8f4",
+	//   "格鬥": "#ef696a",
+	//   "毒": "#ab7acb",
+	//   "地面": "#c8a841",
+	//   "飛行": "#64a6f0",
+	//   "超能": "#ec7ff4",
+	//   "蟲": "#51cc5a",
+	//   "岩石": "#fbc726",
+	//   "幽靈": "#756eb4",
+	//   "龍": "#fe8858",
+	//   "惡": "#6881d5",
+	//   "鋼": "#808aa5",
+	//   "妖精": "#fd779a"
+	// };
+
+const typeColors = {
+	  "一般": "#9fa19f",
+	  "火": "#e62829",
+	  "水": "#2980ef",
+	  "電": "#fac000",
+	  "草": "#3fa129",
+	  "冰": "#3fd8ff",
+	  "格鬥": "#ff8000",
+	  "毒": "#9141cb",
+	  "地面": "#915121",
+	  "飛行": "#81b9ef",
+	  "超能": "#ef4179",
+	  "蟲": "#91a119",
+	  "岩石": "#afa981",
+	  "幽靈": "#704170",
+	  "龍": "#5060e1",
+	  "惡": "#50413f",
+	  "鋼": "#60a1b8",
+	  "妖精": "#ef70ef"
+	};
+
+	const myPokemons = ["土王", "謎擬Q", "沙奈朵", "魔幻假面喵", "風速狗(洗翠)", "洛托姆(清洗)"];
+
+
+	// 按速度降序排列
+	const sortedPokemonData = pokemonData.sort((a, b) => b.speed - a.speed);
+
+	// 將數據生成 <li> 元素
+	const generatePokemonListItems = (pokemonList) => {
+	  return pokemonList.map(pokemon => {
+
+	    const isMyPokemon = myPokemons.includes(pokemon.name);
+	    const specialClass = isMyPokemon ? "my" : "";
+
+
+	    // 生成每個屬性的 span 標籤
+	    const typesHtml = pokemon.types.map(type => 
+	      `<span class="badge rounded-pill" style="background-color: ${typeColors[type]};">${type}</span>&nbsp;`
+	    ).join('');
+
+	    return `
+	      <li class="list-group-item ${specialClass}">
+	        <span class="badge rounded-pill text-bg-primary">${pokemon.speed}</span>
+	        <img src="${pokemon.img}" width="35px">
+	        <span><b>${pokemon.name}</b></span>
+	        <div class="pm-type">
+	          ${typesHtml}
+	        </div>
+	      </li>
+	    `;
+	  }).join('');
+	};
+
+	// 將生成的 <li> 添加到 ul 或 ol 中
+	document.querySelector('#pokemon-list').innerHTML = generatePokemonListItems(sortedPokemonData);	
 
 
 </script>
