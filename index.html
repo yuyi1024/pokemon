@@ -110,7 +110,7 @@
 			<button type="button" class="btn btn-info type-clear-btn" style="background-color: #dedede;">Clear</button>
 		</div>
 	</div>
-	<table id="type-result"></table>
+	<table id="type-result1"></table>
 </div>
 
 <div class="collapse main-card" id="collapseExample3">
@@ -148,17 +148,8 @@
 
 <div class="collapse main-card" id="collapseExample4">
 		<div class="card card-body">
-			<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-			  demo
-			</button> -->
-
-
 			<ul id="pokemon-list" class="list-group list-group-flush">
-			  <!-- JavaScript 將會在這裡插入 <li> 元素 -->
 			</ul>
-
-
-
 		</div>
 	</div>
 </div>
@@ -180,6 +171,8 @@
                 <li><b>特防 (D)：</b><span id="pokeSpDefense"></span></li>
                 <li>速度 (E)： <span id="pokeSpeed"></span></li>
             </ul>
+            <p id="pokeType"></p>
+            <table id="type-result2"></table>
         </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -211,11 +204,11 @@
 	.card-body {
 		border: none;
 	}
-	table#type-result {
+	table#type-result1, table#type-result2 {
 		width: 90%;
 		margin-left: 5%;
 	}
-	table#type-result td {
+	table#type-result1 td, table#type-result2 td {
 		border: 1px solid #dddddd;
 		width: 50%;
 	}
@@ -419,7 +412,7 @@
 	document.querySelectorAll('.type-clear-btn').forEach(button => {
  		button.addEventListener('click', () => {
  			selectedTypes = [];
- 			const resultDiv = document.getElementById('type-result');
+ 			const resultDiv = document.getElementById('type-result1');
  			resultDiv.innerHTML = '';
  		});
 	});
@@ -437,20 +430,20 @@
 	    // 如果選擇了一個屬性，顯示所有屬性對該屬性的傷害倍率
 	    if (selectedTypes.length === 1) {
 	      const results = listDamageMultipliers(selectedTypes);
-	      displayResults(results);
+	      displayResults(results, 1);
 	    } 
 	    // 如果選擇了兩個屬性，顯示所有屬性對這兩個屬性的乘積結果
 	    else if (selectedTypes.length === 2) {
 	      const combinedResults = calculateCombinedResults(selectedTypes);
-	      displayCombinedResults(combinedResults);
+	      displayCombinedResults(combinedResults, 1);
 	      selectedTypes = []; // 重置選擇以便重新選擇
 	    }
 	  });
 	});
 
 	// 顯示單個屬性的所有倍率
-	function displayResults(results) {
-	  const table = document.getElementById('type-result');
+	function displayResults(results, num) {
+	  const table = document.getElementById('type-result' + num);
 	  let tr = `<br>屬性 <span class="badge rounded-pill color-${selectedTypes[0]}">${selectedTypes[0]}</span>：<br>`;
 
 	  // console.log('屬性 "' + selectedTypes[0] + '" 的傷害倍率：');
@@ -484,8 +477,8 @@
 	}
 
 	// 顯示兩個屬性相乘的結果
-	function displayCombinedResults(combinedResults) {
-	  const table = document.getElementById('type-result');
+	function displayCombinedResults(combinedResults, num) {
+	  const table = document.getElementById('type-result' + num);
 	  let tr = `<br>屬性 <span class="badge rounded-pill color-${selectedTypes[0]}">${selectedTypes[0]}</span>&nbsp;<span class="badge rounded-pill color-${selectedTypes[1]}">${selectedTypes[1]}</span>：<br>`;
 
 	  combinedResults.forEach(result => {
@@ -608,7 +601,7 @@ const pokemonData = [
 	      <li class="list-group-item ${specialClass}">
 	        <span class="badge rounded-pill text-bg-primary">${pokemon.speed}</span>
 	        
-        	<a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" data-name="${pokemon.name}" data-ability="${pokemon.ability}"><img src="${pokemon.img}" width="35px"></a>
+        	<a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" data-name="${pokemon.name}" data-ability="${pokemon.ability}" data-type="${pokemon.types}"><img src="${pokemon.img}" width="35px"></a>
 
 	        <span><b>${pokemon.name}</b></span>
 	        <div class="pm-type">
@@ -650,6 +643,24 @@ const pokemonData = [
             pokeSpAttack.textContent = ability[3];
             pokeSpDefense.textContent = ability[4];
             pokeSpeed.textContent = ability[5];
+
+			// console.log(calculateCombinedResults(button.getAttribute("data-type").split(",")));
+
+			let arr = button.getAttribute("data-type").split(",")
+		    if (arr.length === 1) {
+		      const results = listDamageMultipliers(arr);
+		      displayResults(results, 2);
+		    } 
+		    // 如果選擇了兩個屬性，顯示所有屬性對這兩個屬性的乘積結果
+		    else if (arr.length === 2) {
+		      const combinedResults = calculateCombinedResults(arr);
+		      displayCombinedResults(combinedResults, 2);
+		    }
+
+		    const pokeTypeEle = document.getElementById('pokeType');
+	  		let pokeType = `<span class="badge rounded-pill color-${arr[0]}">${arr[0]}</span>&nbsp;<span class="badge rounded-pill color-${arr[1]}">${arr[1]}</span>`;
+	  		pokeTypeEle.innerHTML = pokeType;
+
         });
     });
 </script>
