@@ -223,6 +223,10 @@
 	.effective {
 		background-color: #ffe5e5;
 	}
+	.poke52{
+		color: #000000;
+		text-decoration: none;
+	}
 
 	.color-一般 {
 		background-color: #9fa19f;
@@ -602,8 +606,7 @@ const pokemonData = [
 	        <span class="badge rounded-pill text-bg-primary">${pokemon.speed}</span>
 	        
         	<a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" data-name="${pokemon.name}" data-ability="${pokemon.ability}" data-type="${pokemon.types}"><img src="${pokemon.img}" width="35px"></a>
-
-	        <span><b>${pokemon.name}</b></span>
+    		<a href="https://wiki.52poke.com/zh-hant/${pokemon.name}" class="poke52"><b>${pokemon.name}</b></a>
 	        <div class="pm-type">
 	          ${typesHtml}
 	        </div>
